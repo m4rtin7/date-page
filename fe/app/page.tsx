@@ -8,7 +8,6 @@ import {
   Strong,
   Text,
 } from "@radix-ui/themes";
-import Image from "next/image";
 import { useState } from "react";
 
 type QuestionProps = {
@@ -74,11 +73,9 @@ const Question2 = ({ onClick }: QuestionProps) => {
 };
 
 const Question3 = ({ onClick }: QuestionProps) => {
-  const [showModal, setShowModal] = useState(false);
   const [wrongCount, setWrongCount] = useState(0);
 
   const onWrongAnswear = () => {
-    setShowModal(true);
     setWrongCount((prev) => prev + 1);
   };
 
@@ -141,7 +138,6 @@ const Question3 = ({ onClick }: QuestionProps) => {
 };
 
 const Question4 = () => {
-  const [addMargin, setAddMargin] = useState(false);
   return (
     <>
       <Heading as="h1" className="custom-text">
